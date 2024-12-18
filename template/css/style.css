@@ -58,12 +58,12 @@ header.close{
   transition: 300ms ease-in-out;
   overflow: hidden;
   text-wrap: nowrap;
-  z-index: 1;
+  z-index: 1000;
 }
 
 #sidebar.close{
   padding: 5px;
-  width: 60px;
+  width: 50px;
 }
 
 .logo{
@@ -262,6 +262,7 @@ header.close{
 /* nav-bar */
 header{
   border-bottom: 1px solid #ccc !important;
+  z-index: 999;
 }
 
 #navbar {

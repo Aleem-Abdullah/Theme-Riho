@@ -58,12 +58,12 @@ header.close{
   transition: 300ms ease-in-out;
   overflow: hidden;
   text-wrap: nowrap;
-  z-index: 1;
+  z-index: 1000;
 }
 
 #sidebar.close{
   padding: 5px;
-  width: 60px;
+  width: 50px;
 }
 
 .logo{
@@ -262,6 +262,7 @@ header.close{
 /* nav-bar */
 header{
   border-bottom: 1px solid #ccc !important;
+  z-index: 999;
 }
 
 #navbar {
@@ -476,37 +477,75 @@ header{
 /* Main */
 main{
   margin-top: 80px !important;
+  z-index: 0;
+}
+  .image-preview {
+    max-width: 250px;
+    max-height: 250px;
+    border: 1px solid #ddd;
+    padding: 5px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa;
+}
+.image-preview img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.form-control:focus, .form-select:focus, textarea:focus {
+  border-color: #006666 !important;
+  box-shadow: 0 0 5px #006666 !important;
+  outline: none !important;
+}
+
+.form-select option:hover {
+  background-color: #006666 !important;
+  color: #fff !important;
+}
+
+.btn-primary{
+  background-color: #006666 !important;
+  color: #fff !important; 
+}
+
+.btn-secondary{
+  background-color:#F4B555 !important;
 }
 
 .page-name {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    margin-bottom: 5px;
-    margin-top: 0%;
-    padding-top: 0%;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+  margin-bottom: 5px;
+  margin-top: 0%;
+  padding-top: 0%;
+}
 
-  .page-name h3{
-    font-weight: 500;
-    font-style: italic;
-    font-size: 24px;
-    padding-left: 10px;
-  }
+.page-name h3{
+  font-weight: 500;
+  font-style: italic;
+  font-size: 24px;
+  padding-left: 10px;
+}
 
-  .right-section {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 
-  .right-section p {
-    margin: 0;
-  }
+.right-section p {
+  margin: 0;
+}
 
-  .border-2{
-    border-right: 1px solid grey;
-    border-left: 1px solid grey;
-    padding: 0px 10px;
-  }
+.border-2{
+  border-right: 1px solid grey;
+  border-left: 1px solid grey;
+  padding: 0px 10px;
+}
+

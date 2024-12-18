@@ -38,13 +38,30 @@ function closeAllSubMenus(){
 const profileSection = document.querySelector('.profile-section');
 const profileDropdown = document.querySelector('.profile-dropdown');
 
-profileSection.addEventListener('click', (event) => {
+  profileSection.addEventListener('click', (event) => {
   event.stopPropagation();
   
   profileDropdown.style.display =
-    profileDropdown.style.display === 'block' ? 'none' : 'block';
+  profileDropdown.style.display === 'block' ? 'none' : 'block';
 });
 
 document.addEventListener('click', () => {
   profileDropdown.style.display = 'none';
 });
+
+
+const productImageInput = document.getElementById('productImage');
+        const previewContainer = document.getElementById('previewContainer');
+
+        productImageInput.addEventListener('change', (event) => {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    previewContainer.innerHTML = `<img src="${e.target.result}" alt="Product Image Preview">`;
+                };
+                reader.readAsDataURL(file);
+            } else {
+                previewContainer.innerHTML = '<span>Image Preview</span>';
+            }
+        });
